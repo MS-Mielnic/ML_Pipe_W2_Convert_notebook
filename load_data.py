@@ -7,8 +7,12 @@ It returns a dataframe
 import pandas as pd
 
 def loader():
-    SHEET_ID = '1ZMFrD6F6tvPtf_8McC-kWrNBBec_6Si3NW6AoWf3Kbg'
-    SHEET_NAME = 'xxdata'
-    url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
+    """
+    receives constants  specific to this file
+    in github to read a csv
+    """
+    sheet_id = '1ZMFrD6F6tvPtf_8McC-kWrNBBec_6Si3NW6AoWf3Kbg'
+    sheet_name = 'xxdata'
+    url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}'
     newdf = pd.read_csv(url)
     return newdf
